@@ -1,0 +1,3 @@
+testScores = [99, 78, 85, 96]
+print("Sum = ",sum(testScores))
+print("Average = ",sum(testScores)/len(testScores))
