@@ -43,6 +43,11 @@ public class Point2D {
 		
 		return Math.sqrt(Math.pow(distX,2)+Math.pow(distY, 2));
 	}
+	public double getDistanceToPoint(Point2D p0) { //tai sao cho nay lai ko co static
+		double distX = p0.x - this.x;
+		double distY = p0.y - this.y;
+		return Math.sqrt(Math.pow(distX,2)+Math.pow(distY, 2));
+	}
 	
 	public double getDistanceToOrigin() {
 		Point2D origin = new Point2D();
