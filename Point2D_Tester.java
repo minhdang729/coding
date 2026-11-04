@@ -16,10 +16,11 @@ public class Point2D_Tester {
 		
 		System.out.printf("P2 = %s\n", p2.toString());
 		System.out.printf("Distance to origin: %.3f\n", p2.getDistanceToOrigin());
-		
+		double distance = Point2D.getDistance(p0, p1);
 		Point2D midPoint0_1 = p0.getMidPoint(p1);
 		System.out.printf("Midpoint P0 and P1 = %s, ", midPoint0_1.toString());
 		System.out.printf("Distance to origin: %.3f\n", midPoint0_1.getDistanceToOrigin());
+		System.out.printf("Distance between p0, p1: %.2f",distance);
 	}
 
 }

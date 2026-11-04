@@ -32,8 +32,8 @@ public class Point2D {
 	@Override
 	public String toString() {
 		// round x and y to 2 decimals
-		double x0 = Math.round(this.x*1000.0)/1000.0;
-		double y0 = Math.round(this.y*1000.0)/1000.0;
+		double x0 = Math.round(this.x*100.0)/100.0;
+		double y0 = Math.round(this.y*100.0)/100.0;
 		return "(" + x0 + ", " + y0 + ")";
 	}
 	

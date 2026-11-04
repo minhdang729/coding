@@ -59,11 +59,12 @@ public class PointSet {
 		//calculate the point closest to the center
 		//assume the point of the index 0 is closest
 		int index = 0;
-		double minDistance=pointList.get(index).getDistanceToPoint(pCenter);
+		double minDistance = Point2D.getDistance(pointList.get(index), pCenter);
+		//double minDistance=pointList.get(index).getDistanceToPoint(pCenter);
 		for (int i =1; i<n;i++) {
 			Point2D p = pointList.get(i);
-			double distance = p.getDistanceToPoint(pCenter);
-			
+			//double distance = p.getDistanceToPoint(pCenter);
+			double distance = Point2D.getDistance(pointList.get(i), pCenter);
 			if (distance<minDistance) {
 				minDistance = distance;
 				index = i;
@@ -75,7 +76,7 @@ public class PointSet {
 	private Point2D getCenterCoordinates() {
 		int n = getNumPoints();
 		double sumX=0, sumY=0;
-		for (Point2D p : pointList) {
+		for (Point2D p : this.pointList) {
 			sumX +=p.getX();
 			sumY +=p.getY();
 		}
